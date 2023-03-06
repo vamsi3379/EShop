@@ -125,19 +125,10 @@ namespace Tangy_Business.Repository
         {
             if (objDTO!=null)
             {
-                var orderHeaderFromDb = _db.OrderHeaders.FirstOrDefault(u => u.Id==objDTO.Id);
-                orderHeaderFromDb.Name = objDTO.Name;
-                orderHeaderFromDb.PhoneNumber = objDTO.PhoneNumber;
-                orderHeaderFromDb.Carrier=objDTO.Carrier;
-                orderHeaderFromDb.Tracking= objDTO.Tracking;
-                orderHeaderFromDb.StreetAddress=objDTO.StreetAddress;
-                orderHeaderFromDb.City=objDTO.City;
-                orderHeaderFromDb.State=objDTO.State;
-                orderHeaderFromDb.PostalCode=objDTO.PostalCode;
-                orderHeaderFromDb.Status=objDTO.Status;
-
+                var OrderHeader = _mapper.Map<OrderHeaderDTO, OrderHeader>(objDTO);
+                _db.OrderHeaders.Update(OrderHeader);
                 await _db.SaveChangesAsync();
-                return _mapper.Map<OrderHeader, OrderHeaderDTO>(orderHeaderFromDb);
+                return _mapper.Map<OrderHeader, OrderHeaderDTO>(OrderHeader);
             }
             return new OrderHeaderDTO();
         }
