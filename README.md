@@ -6,9 +6,11 @@ Welcome to eShop, the advanced e-commerce application that offers a seamless and
 
 - [Introduction](#introduction)
 - [Key Features](#key-features)
+- [Deployment](#deployment)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-
+- [Swagger API Documentation](#swagger-api-documentation)
+- 
 
 ## Introduction
 
@@ -25,6 +27,12 @@ EShop is a comprehensive e-commerce solution that aims to provide an outstanding
 - **Real-time Order Tracking:** Stay informed at every step of your order journey. Once an order is placed, customers can track its status in real-time, making the entire process transparent and stress-free.
 
 - **Admin Panel:** The admin panel empowers administrators to oversee incoming orders, manage product information, address customer inquiries, and maintain the platform efficiently.
+
+## Deployment
+
+Client: [eshopclient.azurewebsites.net](eshopclient.azurewebsites.net)
+
+Server: [eshopserver.azurewebsites.net](eshopserver.azurewebsites.net)
 
 ## Prerequisites
 
@@ -44,3 +52,8 @@ To install eShop on your system, follow these steps:
 3. Build the application: `dotnet build`
 4. Run the application: `dotnet run`
 
+## Swagger API Documentation
+
+Explore the eShop API documentation using Swagger:
+
+- [Swagger API Documentation](eshopapis.azurewebsites.net)
